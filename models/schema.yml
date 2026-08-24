@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: dokumenty_v2
+    description: "Tabela dokumentow (naglowki i pozycje)"
+    columns:
+      - name: kom
+        description: "komentarz do dokumentu"
+      - name: opis
+        description: "opis pozycji dokmentu"
+      
