@@ -8,4 +8,29 @@ models:
         description: "komentarz do dokumentu"
       - name: opis
         description: "opis pozycji dokmentu"
+        tests:
+          - not_null
+  #       - relationships:
+  #           to: ref('model.sql')
+  #           field: xxx
       
+# Sekcja dla tabel, które już są w BigQuery (brak modeli SQL w dbt)
+sources:
+  - name: bq_tables   # Dowolna nazwa dla grupy źródeł
+    database: crafty-chiller-504711-m7 
+    schema: test_data_set          
+    tables:
+      - name: dok
+        columns:
+          - name: dok_id
+            description: "Klucz główny"
+            tests:
+              - unique
+              - not_null
+      - name: p_dok
+        columnns:
+          - name: p_dok_lp
+            test:
+            - accepted_values:
+                values: [1,2,3,4,5]      
+
