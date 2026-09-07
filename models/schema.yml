@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: dokumenty_v2
+  - name: rpt_pelne_dokumenty
     description: "Tabela dokumentow (naglowki i pozycje)"
     columns:
       - name: kom
