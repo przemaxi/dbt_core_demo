@@ -28,9 +28,10 @@ sources:
               - unique
               - not_null
       - name: p_dok
-        columnns:
+        columns:
           - name: p_dok_lp
-            test:
+            tests:
             - accepted_values:
-                values: [1,2,3,4,5]      
+                arguments:
+                  values: [1,2,3,4,5]      
 
